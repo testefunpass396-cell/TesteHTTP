@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servidor de Teste HTTP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <span class="selo">API de estudo</span>
+      <h1>Servidor de Teste HTTP</h1>
+      <p class="intro">
+        Este site existe para testar requisições HTTP. Envie uma mensagem com
+        <code>POST /api/mensagem</code> (por exemplo, a partir de um programa Python)
+        e ela aparecerá na lista abaixo.
+      </p>
+    </header>
+
+    <section class="cartao" aria-labelledby="titulo-mensagens">
+      <div class="cartao-topo">
+        <h2 id="titulo-mensagens">Mensagens recebidas <span id="contador" class="contador">0</span></h2>
+        <button id="btn-atualizar" type="button">Atualizar</button>
+      </div>
+
+      <p id="status" class="status" role="status">Carregando...</p>
+      <ul id="lista" class="lista"></ul>
+    </section>
+
+    <aside class="aviso">
+      <strong>Atenção:</strong> as mensagens ficam apenas em memória / arquivo temporário.
+      Elas podem desaparecer quando a função for reiniciada. Projeto de aprendizado.
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

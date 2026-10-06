@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Redireciona as URLs amigáveis da API para a função única.
+[[redirects]]
+  from = "/api/mensagem"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/mensagens"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
